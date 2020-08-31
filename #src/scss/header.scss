@@ -156,7 +156,12 @@
         letter-spacing: 0.35px;
         margin: 0 0 20px 40px;
         max-width: 40vw;
-        
+        & :hover,
+        :active,
+        :focus{
+            opacity: .6;
+            outline: none;
+        }
        
     }
     .header_pagination{
@@ -203,7 +208,79 @@
 // header end
 
 //header media start
-@media (max-width: 650px) { 
+@media (max-width: 1370px) { 
+    .header{
+        .head_carousel1{
+            margin-top: 13vh;        
+        }
+        .state{
+            font-size: 80px;
+            line-height: 80px;
+        }
+        .header_pagination{
+            left: 250px;
+        }
+    }
+}
+@media (max-width: 1030px) { 
+    .header{
+        .prev,
+        .next{
+            display: none;
+        }
+        .head_carousel1{
+            margin-left: 25vw; 
+                
+        }
+        .header_pagination{
+            left: 35vw;
+            .current_slide{
+                margin-left: 0;
+            }
+        }
+        
+        
+    }
+}
+@media (max-width: 950px) and (orientation: landscape) { 
+    .header{
+        .head_carousel1{
+            margin-top: 2vw;
+            .state{
+                font-size: 60px;
+                line-height: 60px;
+                margin-bottom: 18px;
+            }
+            .descr{
+                margin-bottom: 8px;
+            }
+        }
+       
+    }
+}
+@media (max-width: 950px) { 
+    .header{
+        .head_carousel1{
+            margin-left: 10vw;
+            margin-right: 10vw;
+            max-width: 90vw;
+        }
+        .header_nav{
+            justify-content: flex-end;
+        }
+        .header_pagination{
+            bottom: 40px;
+        }
+    }
+}
+@media (max-width: 950px) and (orientation: landscape) { 
+    .header{
+        .header_pagination{
+            display: none;
+        }
+    }
+}
+@media (max-width: 680px) { 
     //burger start
     body.lock{
         overflow: hidden;
@@ -309,10 +386,54 @@
         .burger:after{
             bottom: 0;
         }
+        //burger end
+        .header_pagination{
+            left: 25vw;
+        }
+        .header_socials{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            
+            & span{
+                display: none;
+            }
+           
+        }
+        .header_pagination{
+            bottom: 70px;
+        }
     }
     
 
 
-    //burger end
+    
+
+}
+@media (max-width: 680px) and (orientation: landscape) { 
+    .header{
+        .head_carousel1{
+            margin-top: 1vw;
+            .state{
+                font-size: 40px;
+                line-height: 40px;
+                margin-bottom: 8px;
+            }
+            .descr{
+                margin-bottom: 8px;
+            }
+        }
+       
+    }
+}
+@media (max-width: 450px) { 
+    .header{
+        .head_carousel1{
+            margin-top: 7vh;        
+        }
+        .header_pagination{
+            left: 15vw;
+        }
+    }
 }
 //header media end
