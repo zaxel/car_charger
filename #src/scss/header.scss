@@ -4,7 +4,7 @@
 }
 .header{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background: url(../img/header/Bg.jpg) center center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -242,6 +242,7 @@
         
     }
 }
+
 @media (max-width: 950px) and (orientation: landscape) { 
     .header{
         .head_carousel1{

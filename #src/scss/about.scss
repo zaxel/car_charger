@@ -1,0 +1,89 @@
+//about section start
+.about{
+    position: relative;
+}
+.letter{
+    position: absolute;
+    top: 0;
+    right: 45px;
+    @include big_letter;
+}
+.underletter_container{
+    position: absolute;
+    bottom: 63px;
+    right: 75px;
+    @include underletter_m;
+}
+.about_us_img_container{
+    min-width: 653px;
+    height: 541px;
+    background: url("../img/about/Image.jpg") no-repeat center center;
+
+}
+.about_us_container{
+    margin: 119px 0;
+    display: flex;
+    align-items: center;
+    
+}
+.about_us_descr_container{
+    margin-left: 90px;
+    
+}
+.about_us_h2{
+    @include h2_m;
+    margin-bottom: 10px;
+}
+.about_us_line{
+    height: 2px;
+    width: 47px;
+    background: #e3a062;
+    margin-bottom: 25px;
+}
+.about_us_p{
+    @include p_m;
+    margin-bottom: 35px;
+}
+.about{
+    & .button{
+        @include button_m;
+        outline: none;
+        margin-bottom: 15px;
+    }
+}
+
+//about section end
+//header media start
+@media (max-width: 1370px) { 
+    
+}
+@media (max-width: 1030px) { 
+    .letter{
+        display: none;
+    }
+    .about_us_img_container{
+        width: 90vw;
+        min-width: 0;
+    }
+    .about_us_container{
+        flex-direction: column;
+            margin: 30px 0;
+        
+    }
+    .underletter_container{
+        right: 10px;
+    }
+    .about_us_descr_container{
+        margin-left: 8px;
+    }
+    
+}
+
+@media (max-width: 950px) { 
+    .underletter_container{
+        display: none;
+    }
+}
+
+//header media end
+

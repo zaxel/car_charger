@@ -502,6 +502,8 @@ html {
   font-weight: normal;
   font-size: 16px;
   height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a {
@@ -533,7 +535,7 @@ a {
 
 .header {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: url(../img/header/Bg.jpg) center center no-repeat;
   background-size: cover;
 }
@@ -773,6 +775,124 @@ a {
   margin: 0 40px 18px 0;
 }
 
+.about {
+  position: relative;
+}
+
+.letter {
+  position: absolute;
+  top: 0;
+  right: 45px;
+  opacity: 0.22;
+  color: #e3a062;
+  font-family: "PlayfairDisplay";
+  font-size: 300px;
+  font-weight: 700;
+  line-height: .6;
+  text-transform: uppercase;
+  letter-spacing: 1.71px;
+}
+
+.underletter_container {
+  position: absolute;
+  bottom: 63px;
+  right: 75px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  color: #e3a062;
+  font-family: "PlayfairDisplay";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.underletter_container .underletter_line {
+  content: '';
+  height: 2px;
+  width: 50px;
+  background: #e3a062;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.about_us_img_container {
+  min-width: 653px;
+  height: 541px;
+  background: url("../img/about/Image.jpg") no-repeat center center;
+}
+
+.about_us_container {
+  margin: 119px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about_us_descr_container {
+  margin-left: 90px;
+}
+
+.about_us_h2 {
+  color: #000000;
+  font-family: "PlayfairDisplay";
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 1.63px;
+  margin-bottom: 10px;
+}
+
+.about_us_line {
+  height: 2px;
+  width: 47px;
+  background: #e3a062;
+  margin-bottom: 25px;
+}
+
+.about_us_p {
+  color: #000000;
+  font-family: "ProximaNova";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  margin-bottom: 35px;
+}
+
+.about .button {
+  display: inline-block;
+  border: 1px solid #e3a062;
+  padding: 14px 70px;
+  cursor: pointer;
+  color: #000000;
+  font-family: "ProximaNova";
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.32px;
+  outline: none;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.about .button :hover,
+.about .button :active,
+.about .button :focus {
+  opacity: .6;
+}
+
+.footer {
+  background: black;
+}
+
 @media (max-width: 1370px) {
   .header .head_carousel1 {
     margin-top: 13vh;
@@ -804,6 +924,31 @@ a {
 
   .header .header_pagination .current_slide {
     margin-left: 0;
+  }
+
+  .letter {
+    display: none;
+  }
+
+  .about_us_img_container {
+    width: 90vw;
+    min-width: 0;
+  }
+
+  .about_us_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 30px 0;
+  }
+
+  .underletter_container {
+    right: 10px;
+  }
+
+  .about_us_descr_container {
+    margin-left: 8px;
   }
 }
 
@@ -842,6 +987,10 @@ a {
 
   .header .header_pagination {
     bottom: 40px;
+  }
+
+  .underletter_container {
+    display: none;
   }
 }
 
@@ -1033,64 +1182,4 @@ a {
   .header .header_pagination {
     left: 15vw;
   }
-}
-@supports (-webkit-appearance:none){
-.header{background:url(../img/header/Bg.webp) center center no-repeat}
-.header .logo_container .logo{background:url(../img/header/logo.webp) center center no-repeat}
-}
-
- @media (max-width: 1370px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media (max-width: 1030px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media (max-width: 950px) and (orientation: landscape){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media (max-width: 950px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media (max-width: 680px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media (max-width: 680px) and (orientation: landscape){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media (max-width: 450px){
-
-@supports (-webkit-appearance:none){
-
-}
-
 }

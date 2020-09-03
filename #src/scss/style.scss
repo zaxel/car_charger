@@ -8,6 +8,73 @@
         font-style: $style;
     }
 }
+@mixin big_letter{
+    opacity: 0.22;
+    color: #e3a062;
+    font-family: "PlayfairDisplay";
+    font-size: 300px;
+    font-weight: 700;
+    line-height: .6;
+    text-transform: uppercase;
+    letter-spacing: 1.71px;
+}
+@mixin underletter_m{
+    transform: rotate(-90deg);
+    color: #e3a062;
+    font-family: "PlayfairDisplay";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.39px;
+    display: flex;
+    align-items: center;
+    
+    & .underletter_line{
+        content: '';
+        height: 2px;
+        width: 50px;
+        background: #e3a062;
+        display: inline-block;
+        margin-left: 8px;
+    }
+}
+@mixin h2_m{
+    color: #000000;
+    font-family: "PlayfairDisplay";
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 1.63px;
+}
+@mixin p_m{
+    color: #000000;
+    font-family: "ProximaNova";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+}
+@mixin button_m{
+        display: inline-block;
+
+        border: 1px solid #e3a062;
+        padding: 14px 70px;
+        cursor: pointer;
+
+        color: #000000;
+        font-family: "ProximaNova";
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2.32px;
+        outline: none;
+            & :hover,
+            :active,
+            :focus{
+                opacity: .6;
+            }
+    
+}
+
+
 
 @import "fonts";
 @import "reset";
@@ -18,6 +85,7 @@ html{
     font-weight: normal;
     font-size: 16px;
     height: 100%;
+    box-sizing: border-box;
 }
 a {
     text-decoration: none;
@@ -39,5 +107,7 @@ a {
     padding: 0 8px;
 }
 @import "header";
+@import "about";
+@import "footer";
 
 

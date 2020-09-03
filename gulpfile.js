@@ -9,6 +9,7 @@ let path = {
         js: project_folder + "/js/",
         img: project_folder + "/img/",
         fonts: project_folder + "/fonts/",
+        carousel: project_folder + "/carousel/",
     },
     src: {
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
@@ -17,12 +18,14 @@ let path = {
         jq: source_folder + "/js/**/*.min.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: source_folder + "/fonts/*.ttf",
+        carousel: source_folder + "/carousel/**/*",
     },
     watch: {
         html: source_folder + "/**/*.html",
         css: source_folder + "/scss/**/*.scss",
         js: source_folder + "/js/**/*.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        carousel: source_folder + "/carousel/**/*.{css,scss,sass,less,js}",
     },
     clean: "./" + project_folder + "/"
 }
@@ -33,6 +36,7 @@ browsersync = require("browser-sync").create(),
 fileinclude = require("gulp-file-include"),
 del = require("del"),
 scss = require("gulp-sass"),
+// carousel = require("gulp-sass"),
 autoprefixer = require("gulp-autoprefixer"),
 groupmedia = require("gulp-group-css-media-queries"),
 cleancss = require("gulp-clean-css"),
@@ -75,7 +79,7 @@ function css(){
         overrideBrowserslist: ['last 2 versions'],
         cascade: true
     }))
-    .pipe(webphcss())
+    // .pipe(webphcss())
     .pipe(dest(path.build.css))
     .pipe(cleancss())
     .pipe(
@@ -104,11 +108,17 @@ function jq(){
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream())
 }
+function carousel(){
+    return src(path.src.carousel)
+    .pipe(dest(path.build.carousel))
+    .pipe(browsersync.stream())
+}
 function watchFiles(params){
     gulp.watch([path.watch.html], html)
     gulp.watch([path.watch.css], css)
     gulp.watch([path.watch.js], js)
     gulp.watch([path.watch.img], images)
+    gulp.watch([path.watch.carousel], carousel)
 }
 function images(){
     return src(path.src.img)
@@ -185,7 +195,7 @@ gulp.task('otf2ttf', function(){
     .pipe(dest(source_folder + '/fonts/'))
 })
 
-let build = gulp.series(clean, gulp.parallel(jq, js, css, html, images, fonts), fontStyle);
+let build = gulp.series(clean, gulp.parallel(jq, js, css, carousel, html, images, fonts), fontStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
@@ -195,6 +205,7 @@ exports.images = images;
 exports.jq = jq;
 exports.js = js;
 exports.css = css;
+exports.carousel = carousel;
 exports.html = html;
 exports.build = build;
 exports.watch = watch;
