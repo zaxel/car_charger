@@ -27,6 +27,7 @@
     letter-spacing: 1.39px;
     display: flex;
     align-items: center;
+    max-width: 200px;
     
     & .underletter_line{
         content: '';
@@ -109,5 +110,6 @@ a {
 @import "header";
 @import "about";
 @import "footer";
+@import "services";
 
 
