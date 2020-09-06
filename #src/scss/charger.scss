@@ -1,0 +1,119 @@
+//about section start
+.charger{
+    position: relative;
+}
+.letter{
+    position: absolute;
+    top: -230px;
+    right: 30px;
+    @include big_letter;
+}
+.underletter_container{
+    position: absolute;
+    bottom: 90px;
+    right: 55px;
+    @include underletter_m;
+}
+.charger_img_container{
+    min-width: 653px;
+    height: 541px;
+    background: url("../img/charger/charger.jpg") no-repeat center center;
+
+}
+.charger_container{
+    margin: 119px 0;
+    display: flex;
+    align-items: center;
+}
+.charger_descr_container{
+    margin-left: 90px;
+}
+.charger_h2{
+    @include h2_m;
+    margin-bottom: 10px;
+}
+.charger_line{
+    height: 2px;
+    width: 47px;
+    background: #e3a062;
+    margin-bottom: 25px;
+}
+.charger_p_container{
+    max-height: 230px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 35px;
+}
+.charger_p{
+    @include p_m;
+    &:first-letter {
+        float: left;
+        line-height: 65px;
+        padding-top: 13px;
+        padding-right: 8px;
+
+        color: #e3a062;
+        font-size: 50px;
+        letter-spacing: 1.25px;
+        line-height: 24px;
+      }
+}
+
+.charger{
+    
+    & .button{
+        @include button_m;
+        outline: none;
+        margin-bottom: 15px;
+    }
+    #charger_scroll{
+        &::-webkit-scrollbar-track
+        {
+            // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+        
+        &::-webkit-scrollbar
+        {
+            width: 2px;
+            background-color: #e3a062;
+        }
+        
+        &::-webkit-scrollbar-thumb
+        {
+            background-color: #e3a062;
+        }
+    }
+}
+
+//about section end
+//about media start
+
+@media (max-width: 1030px) { 
+    .letter{
+        display: none;
+    }
+    .charger_img_container{
+        width: 90vw;
+        min-width: 0;
+    }
+    .charger_container{
+        flex-direction: column;
+            margin: 30px 0;
+        
+    }
+    .underletter_container{
+        right: 10px;
+    }
+    .charger_descr_container{
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 950px) { 
+    .underletter_container{
+        display: none;
+    }
+}
+//about media end
+
