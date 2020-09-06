@@ -62,7 +62,7 @@
         justify-content: center;
         li{
             padding-right: 40px;    
-            & :hover,
+            &:hover,
             :active,
             :focus{
                 opacity: .6;
@@ -123,7 +123,7 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        & :hover,
+        &:hover,
         :active,
         :focus{
             opacity: .6;
@@ -136,12 +136,22 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        & :hover,
+        &:hover,
         :active,
         :focus{
             opacity: .6;
         }
     }
+    .card_head_link{
+        &:hover,
+        &:active,
+        &:focus{
+            opacity: .6;
+        }
+    }
+    
+    
+    
     // slider end
 
     .bottom_head_nav_container{
@@ -156,7 +166,7 @@
         letter-spacing: 0.35px;
         margin: 0 0 20px 40px;
         max-width: 40vw;
-        & :hover,
+        &:hover,
         :active,
         :focus{
             opacity: .6;
@@ -224,10 +234,13 @@
 }
 @media (max-width: 1030px) { 
     .header{
-        .prev,
-        .next{
-            display: none;
+        .header_container{
+            .prev.slick-arrow,
+            .next.slick-arrow{
+                display: none;
+            }
         }
+        
         .head_carousel1{
             margin-left: 25vw; 
                 

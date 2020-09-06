@@ -1,0 +1,177 @@
+//projects section atart
+.projects{
+    position: relative;
+    .letter{
+        position: absolute;
+        top: 250px;
+        right: 55px;
+        @include big_letter;
+    }
+    .underletter_container{
+        position: absolute;
+        bottom: 190px;
+        right: 70px;
+        @include underletter_m;
+    }
+    .projects_wrapper{
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 165px;
+        .section_name_container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .projects_h2{
+                @include h2_m;
+                margin-bottom: 10px;
+            }
+            .projects_line{
+                height: 2px;
+                width: 47px;
+                background: #e3a062;
+                margin-bottom: 25px;
+            }
+        }
+        .projects_img_container{
+            margin-top: 20px;
+            margin-bottom: 40px;
+            .top_line{
+                height: 400px;
+                display: flex;
+                flex-wrap: nowrap;
+                width: 2000px;
+                justify-content: space-evenly;
+                align-items: flex-end;
+            }
+            .bottom_line{
+                height: 400px;
+                display: flex;
+                flex-wrap: nowrap;
+                width: 2000px;
+                justify-content: space-evenly;
+                align-items: flex-start;
+            }
+            .project_img{
+                background-size: cover;
+                width: 430px;
+                height: 275px;
+                content: '';
+                margin: 20px;
+                &:hover{
+                    width: 550px;
+                    height: 350px;
+                    background-size: cover;
+                }
+            }
+            .project_img1{
+                background: url("../img/projects/car1.jpg") center center no-repeat;
+            }
+            .project_img2{
+                background: url("../img/projects/car2.jpg") center center no-repeat;
+            }
+            .project_img3{
+                background: url("../img/projects/car3.jpg") center center no-repeat;
+            }
+            .project_img4{
+                background: url("../img/projects/car4.jpg") center center no-repeat;
+            }
+            .project_img6{
+                background: url("../img/projects/car6.jpg") center center no-repeat;
+            }
+            .project_img7{
+                background: url("../img/projects/car7.jpg") center center no-repeat;
+            }
+            .project_img8{
+                background: url("../img/projects/car8.jpg") center center no-repeat;
+            }
+            .project_img9{
+                background: url("../img/projects/car9.jpg") center center no-repeat;
+            }
+        }
+        & .button{
+            @include button_m;
+            outline: none;
+            margin-bottom: 115px;
+        }
+    }
+}
+//project section end
+//projects media start
+
+@media (max-width: 1400px) { 
+    .projects{
+        .letter{
+            display: none;
+        }
+        .projects_wrapper{
+            .projects_img_container{
+                .top_line{
+                    width: 100%;
+                    height: 250px;
+                }
+                .bottom_line{
+                    width: 100%;
+                    height: 250px;
+                }
+                .project_img{
+                    width: 330px;
+                    height: 175px;
+                    margin: 8px;
+                    &:hover{
+                        width: 450px;
+                        height: 250px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+@media (max-width: 1030px) { 
+    .letter{
+        display: none;
+    }
+}
+@media (max-width: 950px) { 
+    .projects{
+        .underletter_container{
+            display: none;
+        }
+        .projects_wrapper{
+            padding-top: 25px;
+            .projects_img_container{
+                .top_line{
+                    flex-wrap: wrap;
+                    height: 100%;
+                }
+                .bottom_line{
+                    flex-wrap: wrap;
+                    height: 100%;
+                }
+                .project_img{
+                    width: 270px;
+                    height: 145px;
+                    &:hover{
+                        width: 330px;
+                        height: 175px;
+                    }
+                }
+            }
+            & .button{
+                margin-bottom: 25px;
+            }
+        }
+    }
+    
+}
+
+
+
+
+//projects media end
+

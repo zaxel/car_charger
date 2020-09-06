@@ -607,7 +607,7 @@ a {
   padding-right: 40px;
 }
 
-.header .header_nav li :hover,
+.header .header_nav li:hover,
 .header .header_nav li :active,
 .header .header_nav li :focus {
   opacity: .6;
@@ -679,7 +679,7 @@ a {
   cursor: pointer;
 }
 
-.header .prev :hover,
+.header .prev:hover,
 .header .prev :active,
 .header .prev :focus {
   opacity: .6;
@@ -698,9 +698,15 @@ a {
   cursor: pointer;
 }
 
-.header .next :hover,
+.header .next:hover,
 .header .next :active,
 .header .next :focus {
+  opacity: .6;
+}
+
+.header .card_head_link:hover,
+.header .card_head_link:active,
+.header .card_head_link:focus {
   opacity: .6;
 }
 
@@ -719,7 +725,7 @@ a {
   max-width: 40vw;
 }
 
-.header .header_socials :hover,
+.header .header_socials:hover,
 .header .header_socials :active,
 .header .header_socials :focus {
   opacity: .6;
@@ -884,10 +890,14 @@ a {
   margin-bottom: 15px;
 }
 
-.about .button :hover,
+.about .button:hover,
 .about .button :active,
 .about .button :focus {
   opacity: .6;
+}
+
+.about .button p {
+  width: 100%;
 }
 
 .footer {
@@ -1162,6 +1172,238 @@ a {
   background-size: cover;
 }
 
+.projects {
+  position: relative;
+}
+
+.projects .letter {
+  position: absolute;
+  top: 250px;
+  right: 55px;
+  opacity: 0.22;
+  color: #e3a062;
+  font-family: "PlayfairDisplay";
+  font-size: 300px;
+  font-weight: 700;
+  line-height: .6;
+  text-transform: uppercase;
+  letter-spacing: 1.71px;
+}
+
+.projects .underletter_container {
+  position: absolute;
+  bottom: 190px;
+  right: 70px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  color: #e3a062;
+  font-family: "PlayfairDisplay";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 200px;
+}
+
+.projects .underletter_container .underletter_line {
+  content: '';
+  height: 2px;
+  width: 50px;
+  background: #e3a062;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.projects .projects_wrapper {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 165px;
+}
+
+.projects .projects_wrapper .section_name_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .projects_wrapper .section_name_container .projects_h2 {
+  color: #000000;
+  font-family: "PlayfairDisplay";
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 1.63px;
+  margin-bottom: 10px;
+}
+
+.projects .projects_wrapper .section_name_container .projects_line {
+  height: 2px;
+  width: 47px;
+  background: #e3a062;
+  margin-bottom: 25px;
+}
+
+.projects .projects_wrapper .projects_img_container {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.projects .projects_wrapper .projects_img_container .top_line {
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 2000px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.projects .projects_wrapper .projects_img_container .bottom_line {
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 2000px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.projects .projects_wrapper .projects_img_container .project_img {
+  background-size: cover;
+  width: 430px;
+  height: 275px;
+  content: '';
+  margin: 20px;
+}
+
+.projects .projects_wrapper .projects_img_container .project_img:hover {
+  width: 550px;
+  height: 350px;
+  background-size: cover;
+}
+
+.projects .projects_wrapper .projects_img_container .project_img1 {
+  background: url("../img/projects/car1.jpg") center center no-repeat;
+}
+
+.projects .projects_wrapper .projects_img_container .project_img2 {
+  background: url("../img/projects/car2.jpg") center center no-repeat;
+}
+
+.projects .projects_wrapper .projects_img_container .project_img3 {
+  background: url("../img/projects/car3.jpg") center center no-repeat;
+}
+
+.projects .projects_wrapper .projects_img_container .project_img4 {
+  background: url("../img/projects/car4.jpg") center center no-repeat;
+}
+
+.projects .projects_wrapper .projects_img_container .project_img6 {
+  background: url("../img/projects/car6.jpg") center center no-repeat;
+}
+
+.projects .projects_wrapper .projects_img_container .project_img7 {
+  background: url("../img/projects/car7.jpg") center center no-repeat;
+}
+
+.projects .projects_wrapper .projects_img_container .project_img8 {
+  background: url("../img/projects/car8.jpg") center center no-repeat;
+}
+
+.projects .projects_wrapper .projects_img_container .project_img9 {
+  background: url("../img/projects/car9.jpg") center center no-repeat;
+}
+
+.projects .projects_wrapper .button {
+  display: inline-block;
+  border: 1px solid #e3a062;
+  padding: 14px 70px;
+  cursor: pointer;
+  color: #000000;
+  font-family: "ProximaNova";
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.32px;
+  outline: none;
+  outline: none;
+  margin-bottom: 115px;
+}
+
+.projects .projects_wrapper .button:hover,
+.projects .projects_wrapper .button :active,
+.projects .projects_wrapper .button :focus {
+  opacity: .6;
+}
+
+.projects .projects_wrapper .button p {
+  width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .projects .letter {
+    display: none;
+  }
+
+  .projects .projects_wrapper .projects_img_container .top_line {
+    width: 100%;
+    height: 250px;
+  }
+
+  .projects .projects_wrapper .projects_img_container .bottom_line {
+    width: 100%;
+    height: 250px;
+  }
+
+  .projects .projects_wrapper .projects_img_container .project_img {
+    width: 330px;
+    height: 175px;
+    margin: 8px;
+  }
+
+  .projects .projects_wrapper .projects_img_container .project_img:hover {
+    width: 450px;
+    height: 250px;
+  }
+}
+
 @media (max-width: 1370px) {
   .header .head_carousel1 {
     margin-top: 13vh;
@@ -1199,8 +1441,8 @@ a {
 }
 
 @media (max-width: 1030px) {
-  .header .prev,
-  .header .next {
+  .header .header_container .prev.slick-arrow,
+  .header .header_container .next.slick-arrow {
     display: none;
   }
 
@@ -1248,6 +1490,10 @@ a {
   .services .underletter_container {
     display: none;
   }
+
+  .letter {
+    display: none;
+  }
 }
 
 @media (max-width: 950px) and (orientation: landscape) {
@@ -1289,6 +1535,40 @@ a {
 
   .underletter_container {
     display: none;
+  }
+
+  .projects .underletter_container {
+    display: none;
+  }
+
+  .projects .projects_wrapper {
+    padding-top: 25px;
+  }
+
+  .projects .projects_wrapper .projects_img_container .top_line {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 100%;
+  }
+
+  .projects .projects_wrapper .projects_img_container .bottom_line {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 100%;
+  }
+
+  .projects .projects_wrapper .projects_img_container .project_img {
+    width: 270px;
+    height: 145px;
+  }
+
+  .projects .projects_wrapper .projects_img_container .project_img:hover {
+    width: 330px;
+    height: 175px;
+  }
+
+  .projects .projects_wrapper .button {
+    margin-bottom: 25px;
   }
 }
 

@@ -67,10 +67,13 @@
         text-transform: uppercase;
         letter-spacing: 2.32px;
         outline: none;
-            & :hover,
+            &:hover,
             :active,
             :focus{
                 opacity: .6;
+            }
+            & p{
+                width: 100%;
             }
     
 }
@@ -111,5 +114,6 @@ a {
 @import "about";
 @import "footer";
 @import "services";
+@import "projects";
 
 
