@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    // header carousel start
     $('.head_carousel1').slick({
         
         dots: false,
@@ -21,6 +22,20 @@ $(document).ready(function(){
     $currentSlide.html('0'+i);
     $totalSlides.html('0'+slick.slideCount);
     });
+    // header carousel end
+
+    //testimonials carousel start
+    $('.carousel2').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        arrows: true,
+        prevArrow: $('.prev_testimonials'),
+        nextArrow: $('.next_testimonials')
+        // adaptiveHeight: true
+    });
+    //testimonials carousel end
   });
   
 $(document).ready(function(){
