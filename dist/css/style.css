@@ -901,11 +901,129 @@ a {
 }
 
 .footer {
-  background: burlywood;
+  background: black;
 }
 
-.footer p {
-  padding-top: 200px;
+.footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footer .wrapper .footer_menu_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.footer .wrapper .footer_menu_container .footer_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .wrapper .footer_menu_container .footer_menu li {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+  margin-left: 40px;
+}
+
+.footer .wrapper .footer_menu_container .footer_menu li a {
+  outline: none;
+}
+
+.footer .wrapper .footer_menu_container .footer_menu li a:hover,
+.footer .wrapper .footer_menu_container .footer_menu li a :active,
+.footer .wrapper .footer_menu_container .footer_menu li a :focus {
+  opacity: .6;
+}
+
+.footer .wrapper .copyright_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer .wrapper .copyright_container .copyright {
+  color: #7b7b7b;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2.1px;
+}
+
+.footer .wrapper .copyright_container .desighned {
+  font-size: 14px;
+  font-weight: 400;
+  color: #787878;
+  letter-spacing: 2.1px;
+}
+
+.footer .wrapper .copyright_container .desighned span {
+  color: white;
+}
+
+.footer .logo_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .logo_container .logo {
+  content: '';
+  width: 39px;
+  height: 39px;
+  background: url("../img/header/logo.png") center center no-repeat;
+}
+
+.footer .logo_container .name_cont {
+  padding-left: 10px;
+}
+
+.footer .logo_container .name {
+  font-family: "PlayfairDisplay";
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  line-height: 22px;
+}
+
+.footer .logo_container .slogan {
+  font-size: 9px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  line-height: 28px;
 }
 
 .services {
@@ -1311,9 +1429,13 @@ a {
   height: 275px;
   content: '';
   margin: 20px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .projects .projects_wrapper .projects_img_container .project_img:hover {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
   width: 550px;
   height: 350px;
   background-size: cover;
@@ -1998,6 +2120,30 @@ a {
   }
 }
 
+@media (max-width: 700px) {
+  .desighned {
+    display: none;
+  }
+
+  .footer_menu_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .copyright_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .copyright_container .copyright {
+    text-align: center;
+  }
+}
+
 @media (max-width: 680px) {
   body.lock {
     overflow: hidden;
@@ -2200,5 +2346,19 @@ a {
 
   .header .header_pagination {
     left: 15vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer .wrapper .footer_menu_container .footer_menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer .wrapper .footer_menu_container .footer_menu li {
+    margin-bottom: 10px;
+    margin-left: 0;
   }
 }

@@ -62,7 +62,9 @@
                 height: 275px;
                 content: '';
                 margin: 20px;
+                transition: .5s ease;
                 &:hover{
+                    transition: .5s ease;
                     width: 550px;
                     height: 350px;
                     background-size: cover;

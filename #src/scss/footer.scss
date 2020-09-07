@@ -1,6 +1,122 @@
+//footer start
 .footer{
-    background: burlywood;
-    p{
-        padding-top: 200px;
+    background: black;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .footer_menu_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            .footer_menu{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                & li{
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    letter-spacing: 0.35px;
+                    margin-left: 40px;
+                    & a{
+                        outline: none;
+                        &:hover,
+                        :active,
+                        :focus{
+                            opacity: .6;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .copyright_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            .copyright{
+                color: #7b7b7b;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 2.1px;
+            }
+            .desighned{
+                font-size: 14px;
+                font-weight: 400;
+                color: #787878;
+                letter-spacing: 2.1px;
+                & span{
+                    color: white;
+                }
+            }
+        }
+    }
+
+
+
+    .logo_container{
+        display: flex;
+
+        .logo{
+            content: '';
+            width: 39px;
+            height: 39px;
+            background: url("../img/header/logo.png") center center no-repeat;
+        }
+        .name_cont{
+            padding-left: 10px;
+        }
+        .name{
+            font-family: "PlayfairDisplay";
+            font-size: 21px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            line-height: 22px;
+        }
+        .slogan{
+            font-size: 9px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            line-height: 28px;
+        }
     }
 }
+//footer media start
+@media (max-width: 700px) { 
+    .desighned{
+        display: none;
+    }
+    .footer_menu_container{
+        flex-direction: column;
+    }
+    .copyright_container{
+        flex-direction: column;
+        .copyright{
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 400px) { 
+    .footer{
+        .wrapper{
+            .footer_menu_container{
+                .footer_menu{
+                    flex-direction: column;
+                    & li{
+                        margin-bottom: 10px;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+//footer media end
+//footer end
