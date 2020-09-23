@@ -116,7 +116,7 @@ $(function(){
     //Hide the button at the end of the last section
     $(window).on('scroll',function(){
         let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-        if (scrollBottom != 0)
+        if (scrollBottom > 100) //px from the bottom where button fadeOut
         $('#scroll_down_id').fadeIn();
         else
         $('#scroll_down_id').fadeOut();
