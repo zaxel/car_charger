@@ -268,8 +268,10 @@
     .header{
         .header_container{
             .prev.slick-arrow,
-            .next.slick-arrow{
+            .next.slick-arrow,
+            .prev, .next{
                 display: none;
+                z-index: -10;
             }
         }
         

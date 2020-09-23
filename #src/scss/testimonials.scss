@@ -158,9 +158,11 @@
         }
         .prev_testimonials{
             display: none;
+            z-index: -10;
         }
         .next_testimonials{
             display: none;
+            z-index: -10;
         }
     }
     

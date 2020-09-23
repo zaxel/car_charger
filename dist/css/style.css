@@ -1976,8 +1976,11 @@ a {
 
 @media (max-width: 1030px) {
   .header .header_container .prev.slick-arrow,
-  .header .header_container .next.slick-arrow {
+  .header .header_container .next.slick-arrow,
+  .header .header_container .prev,
+  .header .header_container .next {
     display: none;
+    z-index: -10;
   }
 
   .header .head_carousel1 {
@@ -2039,10 +2042,12 @@ a {
 
   .testimonials .prev_testimonials {
     display: none;
+    z-index: -10;
   }
 
   .testimonials .next_testimonials {
     display: none;
+    z-index: -10;
   }
 
   .letter {
